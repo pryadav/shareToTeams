@@ -1,0 +1,112 @@
+﻿{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.14",
+  "id": "c805a9d7-93a0-43b2-976d-b533c02e9c71",
+  "packageName": "com.package.name",
+  "name": {
+    "short": "People picker card",
+    "full": "Adaptive card with people picker."
+  },
+  "developer": {
+    "name": "Microsoft",
+    "mpnId": "",
+    "websiteUrl": "https://website.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "description": {
+    "short": "Adaptive card with people picker",
+    "full": "This sample shows the feature of people picker on Adaptive Cards."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#FFFFFF",
+  "staticTabs": [
+    {
+      "entityId": "conversations",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "about",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "<<BOT-ID>>",
+      "scopes": [
+        "personal",
+        "team",
+        "groupchat"
+      ],
+      "commandLists": [
+        {
+          "commands": [
+            {
+              "title": "peoplepickercard",
+              "description": "To get people picker card"
+            }
+          ],
+          "scopes": [
+            "personal"
+          ]
+        },
+        {
+          "commands": [
+            {
+              "title": "peoplepickercard",
+              "description": "To get people picker card"
+            }
+          ],
+          "scopes": [
+            "team"
+          ]
+        },
+        {
+          "commands": [
+            {
+              "title": "peoplepickercard",
+              "description": "To get people picker card"
+            }
+          ],
+          "scopes": [
+            "groupchat"
+          ]
+        }
+      ],
+      "isNotificationOnly": false,
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "supportsFiles": false
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "<<BOT-ID>>",
+      "commands": [],
+      "canUpdateConfiguration": true,
+      "messageHandlers": [
+        {
+          "type": "link",
+          "value": {
+            "domains": [
+              "*.BotFramework.com"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "validDomains": [],
+  "webApplicationInfo": {
+    "id": "<<BOT-ID>>",
+    "resource": ""
+  }
+}
